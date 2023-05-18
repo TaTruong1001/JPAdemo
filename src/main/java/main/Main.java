@@ -7,6 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import repository.BookRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Main {
     static ApplicationContext context = new AnnotationConfigApplicationContext(JPAConfig.class);
@@ -49,29 +50,63 @@ public class Main {
 
     }
     private static void updateBook(int id){
-        BookEntity bookEntity = bookRepository.findById(id).get();
+        Optional<BookEntity> bookEntity = bookRepository.findById(id);
+        if (bookEntity.isPresent())
         System.out.println("Book data before updating");
         System.out.println(bookEntity.toString());
 
-        bookEntity.setAuthor("leo");
-        bookEntity.setNumberPage(199);
-        bookEntity.setPrice(25);
-        bookRepository.save(bookEntity);
+        BookEntity bookEntity1 = bookEntity.get();
+        bookEntity1.setAuthor("leo");
+        bookEntity1.setNumberPage(199);
+        bookEntity1.setPrice(25);
+        bookRepository.save(bookEntity1);
 
         System.out.println("Book data after updating");
         System.out.println(bookEntity.toString());
     }
     private static void deteleBook(int id){
-        BookEntity bookEntity= bookRepository.findById(id).get();
-;        bookRepository.delete(bookEntity);
+        Optional<BookEntity> bookEntity = bookRepository.findById(id);
+        if (bookEntity.isPresent());
+        bookRepository.delete(bookEntity.get());
 
     }
+    private static void findByAuthor(String author) {
+        List<BookEntity> bookList = (List<BookEntity>) bookRepository.findByAuthor(author);
+        if (bookList.size() != 0) {
+            System.out.println("They are");
+            for (BookEntity book : bookList) {
+                System.out.println(book.toString());
+            }
+        }
+    }
+    private static void getBookNameStartWith(String name) {
+        List<BookEntity> bookList = (List<BookEntity>) bookRepository.getBookNameStartWith(name);
+        if (bookList.size() != 0) {
+            System.out.println("They are");
+            for (BookEntity book : bookList) {
+                System.out.println(book.toString());
+            }
+        }
+    }
+    private static void getBookWherePriceLessThanAndNumOfPageGreaterThan(double price, int numberPage) {
+        List<BookEntity> bookList = bookRepository.getBookWherePriceLessThanAndNumOfPageGreaterThan(price, numberPage);
+        if (bookList.size() != 0) {
+            System.out.println("they are");
+            for (BookEntity book : bookList) {
+                System.out.println(book.toString());
+            }
+        }
+    }
+
     public static void main(String[] args) {
         createNewBook();
         readBook();
         readBook(5);
         updateBook(3);
         deteleBook(2);
+        findByAuthor("Alex");
+        getBookNameStartWith("Tomy");
+        getBookWherePriceLessThanAndNumOfPageGreaterThan(20.5,234);
     }
 
 }
