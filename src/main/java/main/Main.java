@@ -99,13 +99,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        createNewBook();
-        readBook();
-        readBook(5);
-        updateBook(3);
-        deteleBook(2);
-        findByAuthor("Alex");
-        getBookNameStartWith("Tomy");
+       // createNewBook();
+      //  readBook();
+       // readBook(5);
+       // updateBook(3);
+       // deteleBook(2);
+       // findByAuthor("Alex");
+       // getBookNameStartWith("Tomy");
         getBookWherePriceLessThanAndNumOfPageGreaterThan(20.5,234);
     }
 
