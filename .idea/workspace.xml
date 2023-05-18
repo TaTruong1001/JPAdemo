@@ -7,7 +7,6 @@
     <list default="true" id="ff10a1c4-8ae9-456b-8118-e65ab3ef7244" name="Changes" comment="JPAdemo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BookRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Admin/Documents/Spring01/JPAdemo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,7 +88,8 @@
       <option name="presentableId" value="Default" />
       <updated>1684151005141</updated>
       <workItem from="1684151006648" duration="8769000" />
-      <workItem from="1684168418110" duration="1892000" />
+      <workItem from="1684168418110" duration="2708000" />
+      <workItem from="1684417050238" duration="606000" />
     </task>
     <task id="LOCAL-00001" summary="JPAdemo">
       <created>1684168544291</created>
@@ -97,7 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684168544291</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="JPAdemo">
+      <created>1684405703372</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684405703372</updated>
+    </task>
+    <task id="LOCAL-00003" summary="JPAdemo">
+      <created>1684405802990</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684405802990</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

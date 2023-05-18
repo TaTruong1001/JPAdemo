@@ -79,17 +79,17 @@ public class Main {
             }
         }
     }
-    private static void getBookNameStartWith(String name) {
-        List<BookEntity> bookList = (List<BookEntity>) bookRepository.getBookNameStartWith(name);
-        if (bookList.size() != 0) {
-            System.out.println("They are");
-            for (BookEntity book : bookList) {
-                System.out.println(book.toString());
-            }
+    public static void getBookNameStartWith(String name){
+        List<BookEntity> listBook = bookRepository.getBookNameStartWith(name);
+        if(listBook.isEmpty()){
+            System.out.println("Book not exist");
+        }
+        for(BookEntity book : listBook){
+            System.out.println(book.toString());
         }
     }
     private static void getBookWherePriceLessThanAndNumOfPageGreaterThan(double price, int numberPage) {
-        List<BookEntity> bookList = bookRepository.getBookWherePriceLessThanAndNumOfPageGreaterThan(price, numberPage);
+        List<BookEntity> bookList = bookRepository. getBookWherePriceLessThanAndNumberOfPageGreaterThan(price, numberPage);
         if (bookList.size() != 0) {
             System.out.println("they are");
             for (BookEntity book : bookList) {
@@ -100,13 +100,13 @@ public class Main {
 
     public static void main(String[] args) {
        // createNewBook();
-      //  readBook();
+        readBook();
        // readBook(5);
        // updateBook(3);
        // deteleBook(2);
        // findByAuthor("Alex");
        // getBookNameStartWith("Tomy");
-        getBookWherePriceLessThanAndNumOfPageGreaterThan(20.5,234);
+       // getBookWherePriceLessThanAndNumOfPageGreaterThan(20.5,234);
     }
 
 }
