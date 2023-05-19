@@ -1,7 +1,5 @@
 package entity;
 
-import com.sun.istack.NotNull;
-import org.springframework.cglib.core.Local;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -21,8 +19,13 @@ public class BookEntity {
     @Column(name="author")
     private String author;
 
-    @Column(name="category")
-    private String category;
+    @ManyToOne
+    @JoinColumn(name = "categoryId")
+    private CategoryEntity category;
+
+    @OneToOne(cascade = {CascadeType.ALL})
+    @PrimaryKeyJoinColumn
+    private BookDetailsEntity bookDetailsEntity;
 
     @Column(name="isbn")
     private String isbn;
@@ -64,12 +67,20 @@ public class BookEntity {
         this.author = author;
     }
 
-    public String getCategory() {
+    public CategoryEntity getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(CategoryEntity category) {
         this.category = category;
+    }
+
+    public BookDetailsEntity getBookDetailsEntity() {
+        return bookDetailsEntity;
+    }
+
+    public void setBookDetailsEntity(BookDetailsEntity bookDetailsEntity) {
+        this.bookDetailsEntity = bookDetailsEntity;
     }
 
     public String getIsbn() {
@@ -110,7 +121,8 @@ public class BookEntity {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +
-                ", category='" + category + '\'' +
+                ", category=" + category +
+                ", bookDetailsEntity=" + bookDetailsEntity +
                 ", isbn='" + isbn + '\'' +
                 ", price=" + price +
                 ", numberPage=" + numberPage +

@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff10a1c4-8ae9-456b-8118-e65ab3ef7244" name="Changes" comment="JPAdemo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/BookDetailsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/CategoryEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/CategoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/BookEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/BookEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BookRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -52,6 +55,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -89,7 +93,9 @@
       <updated>1684151005141</updated>
       <workItem from="1684151006648" duration="8769000" />
       <workItem from="1684168418110" duration="2708000" />
-      <workItem from="1684417050238" duration="606000" />
+      <workItem from="1684417050238" duration="788000" />
+      <workItem from="1684493840501" duration="980000" />
+      <workItem from="1684497105380" duration="1715000" />
     </task>
     <task id="LOCAL-00001" summary="JPAdemo">
       <created>1684168544291</created>
@@ -112,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684405802990</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="JPAdemo">
+      <created>1684417832247</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417832247</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
