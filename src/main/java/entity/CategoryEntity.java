@@ -49,13 +49,4 @@ public class CategoryEntity {
         this.bookEntityList = bookEntityList;
     }
 
-    @Override
-    public String toString() {
-        return "CategoryEntity{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", bookEntityList=" + bookEntityList +
-                '}';
-    }
 }

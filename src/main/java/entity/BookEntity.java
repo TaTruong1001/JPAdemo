@@ -25,20 +25,8 @@ public class BookEntity {
 
     @OneToOne(cascade = {CascadeType.ALL})
     @PrimaryKeyJoinColumn
-    private BookDetailsEntity bookDetailsEntity;
+    private BookDetailsEntity bookDetails;
 
-    @Column(name="isbn")
-    private String isbn;
-
-    @Column(name="price")
-    private double price;
-
-    @Column(name="numberPage")
-    private int numberPage;
-
-    @Column(name="publishDate")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate publishDate;
 
     public BookEntity(){
     }
@@ -75,44 +63,12 @@ public class BookEntity {
         this.category = category;
     }
 
-    public BookDetailsEntity getBookDetailsEntity() {
-        return bookDetailsEntity;
+    public BookDetailsEntity getBookDetails() {
+        return bookDetails;
     }
 
-    public void setBookDetailsEntity(BookDetailsEntity bookDetailsEntity) {
-        this.bookDetailsEntity = bookDetailsEntity;
-    }
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public int getNumberPage() {
-        return numberPage;
-    }
-
-    public void setNumberPage(int numberPage) {
-        this.numberPage = numberPage;
-    }
-
-    public LocalDate getPublishDate() {
-        return publishDate;
-    }
-
-    public void setPublishDate(LocalDate publishDate) {
-        this.publishDate = publishDate;
+    public void setBookDetails(BookDetailsEntity bookDetails) {
+        this.bookDetails = bookDetails;
     }
 
     @Override
@@ -122,11 +78,7 @@ public class BookEntity {
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +
                 ", category=" + category +
-                ", bookDetailsEntity=" + bookDetailsEntity +
-                ", isbn='" + isbn + '\'' +
-                ", price=" + price +
-                ", numberPage=" + numberPage +
-                ", publishDate=" + publishDate +
+                ", bookDetails=" + bookDetails +
                 '}';
     }
 }

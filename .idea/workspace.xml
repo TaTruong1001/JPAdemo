@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff10a1c4-8ae9-456b-8118-e65ab3ef7244" name="Changes" comment="JPAdemo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/BookDetailsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/CategoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/CategoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/BookDetailsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/BookDetailsEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/BookEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/BookEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/CategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/CategoryEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CategoryRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/Documents/Spring01/JPAdemo",
+    "last_opened_file_path": "C:/Users/Admin/Documents/Spring01/JPAdemo_2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -95,7 +96,8 @@
       <workItem from="1684168418110" duration="2708000" />
       <workItem from="1684417050238" duration="788000" />
       <workItem from="1684493840501" duration="980000" />
-      <workItem from="1684497105380" duration="1715000" />
+      <workItem from="1684497105380" duration="7496000" />
+      <workItem from="1684632466751" duration="8715000" />
     </task>
     <task id="LOCAL-00001" summary="JPAdemo">
       <created>1684168544291</created>
@@ -125,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684417832247</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="JPAdemo">
+      <created>1684498846620</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684498846620</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

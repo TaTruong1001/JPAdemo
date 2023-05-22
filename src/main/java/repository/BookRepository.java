@@ -9,9 +9,23 @@ import java.util.List;
 
 @Repository
 public interface BookRepository extends CrudRepository<BookEntity, Integer> {
-   List<BookEntity> findByAuthor(String author);
-    @Query("Select b from BookEntity b where b.name like ?1%")
+    List<BookEntity> findByAuthor(String author);
+
+    List<BookEntity> findByNameAndAuthor(String name, String author);
+
+    List<BookEntity> findByNameOrAuthor(String name, String author);
+
+    List<BookEntity> findByBookDetailsPriceLessThan(int price);
+
+    List<BookEntity> findByNameContaining(String name);
+
+    @Query(value = "select * from book", nativeQuery = true)
+    List<BookEntity> getAll();
+
+    List<BookEntity> findByBookDetailsIsbn(String isbn);
+
+    @Query("select b from BookEntity b where b.name like ?1%")
     List<BookEntity> getBookNameStartWith(String name);
-    @Query(value = "select * from book  where price < ?1 and numberPage >= ?2", nativeQuery = true)
-    List<BookEntity>  getBookWherePriceLessThanAndNumberOfPageGreaterThan(double price, int numberPage);
+    @Query("select b from BookEntity b where b.bookDetails.price > ?1")
+    List<BookEntity> getBookPriceGreaterThan(int price);
 }
