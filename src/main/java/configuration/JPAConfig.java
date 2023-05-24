@@ -9,6 +9,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import service.AccountService;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -34,6 +35,7 @@ public class JPAConfig {
         entityManagerFactoryBean.setPackagesToScan("entity");
         entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         entityManagerFactoryBean.setJpaProperties(additionalProperties());
+//        entityManagerFactoryBean.setPackagesToScan("com.mycompany.spring_transaction_managenment.entities");
 
         return entityManagerFactoryBean;
     }
@@ -54,8 +56,17 @@ public class JPAConfig {
         transactionManager.setEntityManagerFactory(emf);
         return transactionManager;
     }
-
-
+//    @Bean
+//    public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory){
+//        JpaTransactionManager jpaTransactionManager = new JpaTransactionManager();
+//        jpaTransactionManager.setEntityManagerFactory(entityManagerFactory);
+//        return jpaTransactionManager;
+//    }
+    @Bean
+    public AccountService accountService(JpaTransactionManager jpaTransactionManager){
+        AccountService accountService = new AccountService(jpaTransactionManager);
+        return accountService;
+    }
 
 
 

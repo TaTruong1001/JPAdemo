@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import repository.BookRepository;
 import repository.CategoryRepository;
+import service.AccountService;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -19,9 +20,22 @@ public class Main {
 
     static CategoryRepository categoryRepository = (CategoryRepository) context.getBean("categoryRepository");
 
-    public static void main(String[] args) {
-       createNewBookEntryWithNewCategory();
-       createNewBookEntity();
+    AccountService accountService = (AccountService) context.getBean("accountService");
+
+
+    public static void main(String[] args) throws Exception {
+        AccountService accountService = (AccountService) context.getBean("accountService");
+        accountService.transferMoney(1,2,200);
+
+
+
+
+
+
+
+
+      // createNewBookEntryWithNewCategory();
+      // createNewBookEntity();
       //  findByAuthor("Leo");
        // findByNameAndAuthor("Java all 1", "Tomy");
       // findByNameOrAuthor("Java all_1", "Tomy");
@@ -30,7 +44,7 @@ public class Main {
       //  findAllUsingQuery();
       //  findByBookDetailsIsbn("ISIIBF12193235");
       //  getBookNameStartWithusingQuery("Java all");
-        findBookPriceGreaterThanUsingQuery(24);
+      //  findBookPriceGreaterThanUsingQuery(24);
 
     }
     public static void findByAuthor(String author){

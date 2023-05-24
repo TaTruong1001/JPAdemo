@@ -78,7 +78,7 @@ public class BookEntity {
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +
                 ", category=" + category +
-                ", bookDetails=" + bookDetails +
+                ", bookDetails=" + bookDetails.toString() +
                 '}';
     }
 }
